@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipment Lists</title>
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav id="toc" aria-label="目次">
+      <ul>
+        <li><a href="#cinema-camera">Cinema Camera</a></li>
+        <li><a href="#cinema-lens">Cinema Lens</a></li>
+        <li><a href="#camera-accessory">Camera Accessory</a></li>
+        <li><a href="#camera-support">Camera Support</a></li>
+        <li><a href="#monitoring">Monitoring</a></li>
+        <li><a href="#lighting">Lighting</a></li>
+        <li><a href="#grip">Grip</a></li>
+        <li><a href="#power">Power</a></li>
+        <li><a href="#drone">Drone</a></li>
+      </ul>
+    </nav>
+    <h1 id="title">Equipment List</h1>
+    <canvas id="sparks"></canvas>
+  </header>
+
+  <main>
+
+    <!-- 並び順を整理：cinema camera, cinema lens, camera accessory, camera support, monitoring, lighting, grip, power, drone -->
+    <section class="toggle-section" id="cinema-camera">
+      <h2 class="toggle-header">Cinema Camera</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">RED</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;"><a href="https://www.red.com/komodo" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">RED KOMODO 6K</a></div>
+            <img src="image/redkomodo6k.webp" alt="RED KOMODO 6K" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+          </div>
+        </div>
+        <ul>
+        </ul>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="cinema-lens">
+      <h2 class="toggle-header">Cinema Lens</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">Spherical</h2>
+          <div class="toggle-content">
+            <ul>
+              <!-- ここにSphericalレンズを追加 -->
+            </ul>
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Zoom</h2>
+          <div class="toggle-content">
+            <ul>
+              <!-- ここにZoomレンズを追加 -->
+            </ul>
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Lens Adapter</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.system5.jp/products/n_1162632" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                DZOFilm DZO-ADPLRBLK RF to PL Adapter
+              </a>
+            <img src="image/dzofilm.lens.webp" alt="DZOFilm DZO-ADPLRBLK RF to PL Adapter" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="camera-accessory">
+      <h2 class="toggle-header">Camera Accessory</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">Plate</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.system5.jp/products/n_1147546" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Tilta TT-C16-BLK 10” dovetail plate
+              </a>
+              <img src="image/tiltaplate.webp" alt="Tilta TT-C16-BLK 10” dovetail plate" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">MatteBoxes & Filters</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.bhphotovideo.com/c/product/1195316-REG/nisi_nano_ir_nd_0_6_4x5_65_nano_infrared_neutral_density.html" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                NiSi IRND 0.6 4”x5.56” 2stop
+              </a>
+              <img src="image/nisi_nano_ir_nd_0_6_4x5_65_nano_infrared_neutral_density_1446636210_1195316.jpg" alt="NiSi IRND 0.6 4”x5.56” 2stop" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.georges.com.au/products/nisi-cinema-4x5-65-nano-irnd-soft-edge-graduated-0-9-filter-3-stop" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                NiSi IRND 0.9 4”x5.56” 3stop
+              </a>
+              <img src="image/103498_1__1_1000x.webp" alt="NiSi IRND 0.9 4”x5.56” 3stop" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.amazon.co.jp/gp/product/B0B1WPL938?ie=UTF8&th=1" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                TILTA mini matbox 4x5.65”
+              </a>
+              <img src="image/715lLjEsgyL._AC_SX569_.jpg" alt="TILTA mini matbox 4x5.65”" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Follow Focus</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://tilta.shop/items/6305850f84bcfd7d7cbd12c9" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                TILTA Tiltaing Pocket Follow Focus (FF-T07)
+              </a>
+              <img src="image/fit=cover,w=920,h=920.avif" alt="TILTA Tiltaing Pocket Follow Focus (FF-T07)" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://tilta.shop/items/64ed9d36d34c9c002c7d47d2" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                TILTA Nucleus Nano II
+              </a>
+              <img src="image/fit=cover,w=920,h=920 (1).avif" alt="TILTA Nucleus Nano II" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://tilta.shop/items/5e889a532a9a4245bfee8de5" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                TILTA Seamless Focus Gear Ring (72mm to 74mm, 81mm to 83mm)
+              </a>
+              <img src="image/fit=cover,w=920,h=920 (2).avif" alt="TILTA Seamless Focus Gear Ring (72mm to 74mm, 81mm to 83mm)" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="camera-support">
+      <h2 class="toggle-header">Camera Support</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">Support & Rigs</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://tilta.shop/items/639aa67b3589b926fa17996a" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Tilta Basic Ring Grip Plus for DJI Ronin Control Kit
+              </a>
+              <img src="image/fit=cover,w=920,h=920 (3).avif" alt="Tilta Basic Ring Grip Plus for DJI Ronin Control Kit" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://tilta.shop/items/62e1028d2144253c3ca128ff" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Tilta Lightweight Shoulder Rig
+              </a>
+              <img src="image/fit=cover,w=920,h=920 (4).avif" alt="Tilta Lightweight Shoulder Rig" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://tilta.shop/items/6004e3fbb00aa318d216181b" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Tilta Power Supply Base Plate for RS 2 (TGA-PBP)
+              </a>
+              <img src="image/fit=cover,w=920,h=920 (5).avif" alt="Tilta Power Supply Base Plate for RS 2 (TGA-PBP)" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Tripods</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.amazon.co.jp/dp/B07NBY8B4Y?language=ja-JP&th=1" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Manfrotto MVH502AH
+              </a>
+              <img src="image/511Yeo8s6KL._AC_SY879_.jpg" alt="Manfrotto MVH502AH" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Gimbals</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://sekido-rc.com/?pid=168855997" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                DJI RS3 PRO
+              </a>
+              <img src="image/168855997.webp" alt="DJI RS3 PRO" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="monitoring">
+      <h2 class="toggle-header">Monitoring</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">Monitors</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.fujiya-camera.co.jp/shop/g/gC4573213708026/" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                PortKeys BM5IIIWR
+              </a>
+              <img src="image/C4573213708026_l.jpg" alt="PortKeys BM5IIIWR" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+        <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+          <a href="https://osee-tech.com/products/g7kit" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+            OSEE G7 4K ULTRAHD
+          </a>
+          <img src="image/g7_white_background_1296x1296.webp" alt="OSEE G7 4K ULTRAHD" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+        </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Transmitters</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.system5.jp/products/n_1193762" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Accsoon CineView Master 4K
+              </a>
+              <img src="image/N_1193762p1_1184x1184.webp" alt="Accsoon CineView Master 4K" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="lighting">
+      <h2 class="toggle-header">Lighting</h2>
+      <div class="toggle-content">
+        <ul>
+          <!-- ここにLighting関連アイテムを追加 -->
+        </ul>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="grip">
+      <h2 class="toggle-header">Grip</h2>
+      <div class="toggle-content">
+        <ul>
+          <!-- ここにGrip関連アイテムを追加 -->
+        </ul>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="power">
+      <h2 class="toggle-header">Power</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">Battery</h2>
+          <div class="toggle-content">
+            <div class="toggle-section">
+              <h2 class="toggle-header">V-mount</h2>
+              <div class="toggle-content">
+                <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+                  <a href="https://momanx.com/products/v-mount-battery-power-99" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                    MOMAN 99Wh V-mount Battery
+                  </a>
+                  <img src="image/Moman-Power99_1_1000x.webp" alt="MOMAN 99Wh V-mount Battery" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+                </div>
+                <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+                  <a href="https://www.amazon.co.jp/dp/B09NB9QFDF?social_share=cm_sw_r_cp_ud_dp_QN3ABYFTJEQ3R9D32TPR&previewDoh=1" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                    V-mount Battery 15000mAh Powerextra
+                  </a>
+                  <img src="image/619iMywFSNL._AC_SX679_.jpg" alt="V-mount Battery 15000mAh Powerextra" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+                </div>
+                <!-- 画像ファイル名は必要に応じて修正してください -->
+              </div>
+            </div>
+            <div class="toggle-section">
+              <h2 class="toggle-header">L-mount</h2>
+              <div class="toggle-content">
+                <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+                  <a href="https://www.amazon.co.jp/dp/B0BYHQWG4X?psc=1&sp_csd=d2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                    Vemico NP-F970 L-mount Battery
+                  </a>
+                  <img src="image/71V6ihSMBtL._AC_SX679_.jpg" alt="Vemico NP-F970 L-mount Battery" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+                </div>
+                <!-- 画像ファイル名は必要に応じて修正してください -->
+              </div>
+            </div>
+            <div class="toggle-section">
+              <h2 class="toggle-header">Charger</h2>
+              <div class="toggle-content">
+                <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+                  <a href="#" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                    Meagkka V-mount Battery Charger
+                  </a>
+                  <img src="image/azshop15_b0bkg869h6_3_d_20231219131152.webp" alt="Meagkka V-mount Battery Charger" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+                </div>
+                <!-- 画像ファイル名・リンクは必要に応じて修正してください -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-section">
+          <h2 class="toggle-header">Battery Adapter</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://www.amazon.co.jp/dp/B08MWQKG4K?ref=cm_sw_r_cso_cp_mwn_dp_M2FC9KJ6VGKYBWMY6QRE&ref_=cm_sw_r_cso_cp_mwn_dp_M2FC9KJ6VGKYBWMY6QRE&social_share=cm_sw_r_cso_cp_mwn_dp_M2FC9KJ6VGKYBWMY6QRE" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                Tilta Dual Canon BP to V-Mount Adapter Battery Plate
+              </a>
+              <img src="image/71gPcMugdxL._AC_SX679_.jpg" alt="Tilta Dual Canon BP to V-Mount Adapter Battery Plate" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toggle-section" id="drone">
+      <h2 class="toggle-header">Drone</h2>
+      <div class="toggle-content">
+        <div class="toggle-section">
+          <h2 class="toggle-header">DJI</h2>
+          <div class="toggle-content">
+            <div style="text-align:center; font-weight:bold; margin-bottom:0.1em;">
+              <a href="https://store.dji.com/jp/product/dji-avata-2?vid=164721" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">
+                DJI Avata 2 Fly More Combo
+              </a>
+              <img src="image/a8aec5c94d8ebf70c85539109954b7a1@ultra.jpg" alt="DJI Avata 2 Fly More Combo" style="display:block; margin:0 auto 0.2em auto; max-width:100%; height:auto;" />
+            </div>
+            <!-- 画像ファイル名は必要に応じて修正してください -->
+          </div>
+        </div>
+      </div>
+    </section>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SLOWDoWN SHoT | Haruki Yoshino</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

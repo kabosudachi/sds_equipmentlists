@@ -1,0 +1,397 @@
+/* --- カテゴリ発光ギミック --- */
+.toggle-section.glow {
+  box-shadow: 0 0 24px 8px #0ff, 0 0 8px 2px #fff, 0 0 0 2px #0ff8;
+  border-radius: 1.2em;
+  transition: box-shadow 0.2s;
+  z-index: 20;
+}
+/* --- 目次（Table of Contents） --- */
+#toc {
+  font-family: 'Orbitron', 'Arial', sans-serif;
+  font-size: 0.85em;
+  margin: 0 auto 0.5em auto;
+  padding: 0.3em 1.2em;
+  max-width: 700px;
+  background: rgba(10, 10, 20, 0.85);
+  border-radius: 1.2em;
+  box-shadow: 0 0 8px #0ff8, 0 0 2px #fff2;
+  text-align: center;
+  z-index: 10;
+}
+#toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2em;
+}
+#toc li {
+  display: inline;
+}
+#toc a {
+  color: #0ff;
+  text-shadow: 0 0 4px #0ff, 0 0 2px #fff;
+  text-decoration: none;
+  padding: 0.1em 0.4em;
+  border-radius: 0.5em;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+#toc a:hover, #toc a:focus {
+  background: #0ff2;
+  color: #fff;
+  text-shadow: 0 0 8px #fff, 0 0 2px #0ff;
+}
+/* --- 空のトグル用揺れアニメーション --- */
+.toggle-content.shake {
+  animation: shakeX 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shakeX {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-8px); }
+  40%, 60% { transform: translateX(8px); }
+  100% { transform: none; }
+}
+/* --- Equipment Item & Toggle Content Paragraph Custom Styles --- */
+.toggle-content p {
+  line-height: 1.8;
+  margin-bottom: 0.8em;
+  font-size: 1.05rem;
+  color: #f0f0f0;
+}
+
+.equipment-item {
+  background: rgba(30, 0, 0, 0.4);
+  border-left: 4px solid #ff003c88;
+  padding: 0.75em 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #ff003c22;
+  transition: transform 0.2s;
+}
+
+.equipment-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 10px #ff003c88;
+}
+/* --- Sparks Canvas for Cyberpunk Effect --- */
+#title {
+  position: relative;
+  z-index: 2;
+}
+#sparks {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 420px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 3;
+}
+/* --- Neon Flicker H1 --- */
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ff003c;
+  font-family: 'Orbitron', 'Arial Black', 'Arial', sans-serif;
+  font-weight: 700;
+  text-shadow:
+    0 0 5px #ff003c,
+    0 0 10px #ff003c,
+    0 0 20px #ff003c,
+    0 0 40px #ff3366,
+    0 0 60px #ff3366,
+    0 0 80px #ff6699,
+    0 0 100px #fff;
+  animation: flicker 2s infinite alternate;
+  margin-top: 1em;
+  letter-spacing: 0.15em;
+  filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 8px #ff003c);
+  background: linear-gradient(90deg, #ff003c 0%, #ff3366 50%, #ff6699 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-color: #000;
+  padding: 0.2em 1.2em;
+  border-radius: 0.5em;
+  display: inline-block;
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; text-shadow: 0 0 5px #ff003c; }
+  20%  { opacity: 0.8; text-shadow: 0 0 20px #ff3366; }
+  40%  { opacity: 1; text-shadow: 0 0 40px #ff6699; }
+  60%  { opacity: 0.9; text-shadow: 0 0 10px #ff003c; }
+  80%  { opacity: 1; text-shadow: 0 0 60px #ff3366; }
+  100% { opacity: 0.95; text-shadow: 0 0 80px #ff003c; }
+}
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  background: #000 !important;
+  color: #f2f2f2;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2em 1em;
+  background: #110000;
+  color: #ff003c;
+  border-bottom: 2px solid #ff003c44;
+  box-shadow: 0 0 15px #ff003c55;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 1.5em;
+}
+
+.toggle-section {
+  background: rgba(20, 0, 0, 0.6);
+  border: 1px solid #ff003c33;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  box-shadow: 0 0 10px #ff003c22;
+}
+
+.toggle-header {
+  cursor: pointer;
+  background: rgba(60, 0, 0, 0.9);
+  color: #ff003c !important;
+  padding: 1em;
+  margin: 0.5em 0;
+  border: 1px solid #ff003c66;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px #ff003c66, inset 0 0 5px #ff003c44;
+  transition: all 0.3s ease;
+}
+
+.toggle-header:hover {
+  background: rgba(255, 0, 60, 0.2);
+  box-shadow: 0 0 20px #ff003c99, inset 0 0 10px #ff003c66;
+  transform: translateY(-2px);
+}
+
+.toggle-content {
+  background: rgba(255, 0, 60, 0.03);
+  padding: 1em;
+  border-left: 2px solid #ff003c44;
+  border-radius: 6px;
+  box-shadow: inset 0 0 10px #ff003c22;
+  color: #ff003c;
+  margin-bottom: 1em;
+}
+
+.toggle-content a {
+  color: #ff003c;
+  text-decoration: underline dotted;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.toggle-content a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ff003c;
+}
+
+.toggle-content img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff003c33;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background: #110000;
+  border-top: 2px solid #ff003c44;
+  box-shadow: 0 0 15px #ff003c33;
+  font-size: 0.9rem;
+}
+/* --- Cyberpunk Neon Toggle Header --- */
+.toggle-header {
+  cursor: pointer;
+  background: rgba(30, 0, 0, 0.8);
+  color: #ff003c;
+  padding: 1em;
+  margin: 0.5em 0;
+  border: 1px solid #ff003c66;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px #ff003c66, inset 0 0 5px #ff003c44;
+  transition: all 0.3s ease;
+}
+
+.toggle-header:hover {
+  background: rgba(255, 0, 60, 0.2);
+  box-shadow: 0 0 20px #ff003c99, inset 0 0 10px #ff003c66;
+  transform: translateY(-2px);
+}
+/* --- Cyberpunk Neon Body Style --- */
+body {
+  background: #000; /* 真っ黒背景 */
+  color: #f0f0f0;
+  font-family: 'Orbitron', sans-serif;
+}
+/* --- Cyberpunk Neon Toggle Section --- */
+.toggle-section {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #00ffff22;
+  border-radius: 8px;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+}
+/* --- Cyberpunk Neon Toggle Content Links & Images --- */
+.toggle-content a {
+  color: #00ffff;
+  text-decoration: underline dotted;
+  font-weight: bold;
+}
+
+.toggle-content a:hover {
+  color: #ff00cc;
+  text-shadow: 0 0 8px #ff00cc;
+}
+
+.toggle-content img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffff44;
+}
+/* --- Cyberpunk Neon Toggle Content --- */
+.toggle-content {
+  background: rgba(255, 255, 255, 0.03); /* 薄いネオン風黒背景 */
+  padding: 1em;
+  margin-bottom: 1em;
+  border-left: 2px solid #00ffff44;
+  border-radius: 6px;
+  box-shadow: inset 0 0 10px #00ffff22;
+  color: #ddd; /* 文字をグレーに */
+  transition: all 0.3s ease;
+}
+/* サイバーパンク風のトグルスタイル */
+.toggle-header {
+  cursor: pointer;
+  background: rgba(10, 10, 20, 0.8);
+  color: #00ffff;
+  padding: 1em;
+  margin: 0.5em 0;
+  border: 1px solid #00ffff66;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px #00ffff66, inset 0 0 5px #00ffff44;
+  transition: all 0.3s ease;
+}
+
+.toggle-header:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px #00ffff99, inset 0 0 10px #00ffff66;
+  transform: translateY(-2px);
+}
+
+/* 開閉セクションのアニメ */
+.toggle-content {
+  padding: 0 1em;
+  border-left: 2px solid #00ffff33;
+  margin-bottom: 1em;
+  transition: all 0.3s ease;
+}
+
+/* 全体背景にサイバーパンク調の演出を追加するなら */
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+/* リスト内画像の最大幅を指定 */
+.toggle-content img {
+  max-width: 300px;
+  height: auto;
+}
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.toggle-header {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: #f0f0f0;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.toggle-header:hover {
+  background: #e0e0e0;
+}
+
+
+.toggle-content {
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  display: none !important;
+}
+
+.toggle-section.active > .toggle-content,
+.toggle-content.active {
+  display: block !important;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background: #eee;
+}
