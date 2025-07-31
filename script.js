@@ -1,3 +1,45 @@
+// Hamburger menu submenu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  // ...existing code...
+  // Submenu toggles
+  document.querySelectorAll('.menu-toggle-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const sublist = btn.nextElementSibling;
+      if (sublist && sublist.classList.contains('menu-sublist')) {
+        const isOpen = sublist.style.display === 'block';
+        // Close all sublists first
+        document.querySelectorAll('.menu-sublist').forEach(function(list) {
+          list.style.display = 'none';
+        });
+        // Toggle current
+        sublist.style.display = isOpen ? 'none' : 'block';
+      }
+    });
+  });
+});
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('menu-toggle');
+  const nav = document.getElementById('toc');
+  let menuOpen = false;
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function() {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        nav.style.transform = 'translateX(0)';
+      } else {
+        nav.style.transform = 'translateX(-100%)';
+      }
+    });
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        nav.style.transform = 'translateX(-100%)';
+        menuOpen = false;
+      });
+    });
+  }
+});
 // 目次クリックでカテゴリ発光ギミック
 document.addEventListener('DOMContentLoaded', function() {
   const tocLinks = document.querySelectorAll('#toc a[href^="#"]');
